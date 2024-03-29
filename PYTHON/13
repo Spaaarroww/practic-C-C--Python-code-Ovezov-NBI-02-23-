@@ -1,18 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+import random
 
-int main() {
-    int array[15];
+array = []
 
-    // Инициализация генератора случайных чисел
-    srand(time(NULL));
-
-    printf("Массив из 15 случайных чисел: ");
-    for (int i = 0; i < 15; i++) {
-        array[i] = rand() % 100; // Генерация случайных чисел от 0 до 99
-        printf("%d ", array[i]);
-    }
-
-    return 0;
-}
+print("Массив из 15 случайных чисел:", end=" ")
+for _ in range(15):
+    num = random.randint(1, 100)  # Генерация случайных чисел от 1 до 100
+    array.append(num)
+    print(num, end=" ")
